@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_centerInParent="true"
+    android:background="#fff"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="#1A2A3C">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginStart="20dp"
+            android:gravity="center|center_horizontal"
+            android:text="Hand Sign"
+            android:textColor="#F3DADA"
+            android:textSize="20sp" />
+
+    </RelativeLayout>
+
+    <FrameLayout
+        android:id="@+id/frame1"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="66dp"
+        android:layout_marginBottom="37dp"
+        android:background="@drawable/roundframe"
+        app:cardCornerRadius="150dp">
+
+        <ImageButton
+            android:id="@+id/camerabutton"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:background="#1A2A3C"
+            android:src="@drawable/baseline_camera_alt_24"
+            android:contentDescription="Camera_Button"
+            android:scaleType="fitCenter"
+            app:tint="#F3DADA" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Camera"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:textSize="20dp"
+            android:textColor="#F3DADA"
+            />
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/frame2"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="66dp"
+        android:layout_marginBottom="37dp"
+        android:background="@drawable/roundframe">
+    <ImageButton
+        android:id="@+id/gallerybutton"
+        android:layout_width="50dp"
+        android:layout_height="48dp"
+        android:layout_gravity="center"
+        android:background="#1A2A3C"
+        android:src="@drawable/gallery"
+        android:contentDescription="Gallery_Button"
+        android:scaleType="fitCenter"
+        app:tint="#F3DADA" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gallery"
+        android:layout_gravity="center"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:textColor="#F3DADA"
+        />
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="370sp"
+        android:layout_height="370sp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp" />
+
+    <TextView
+        android:id="@+id/classified"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10sp"
+        android:text="Recognized as:"
+        android:textColor="#1A2A3C"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/classified"
+        android:layout_centerHorizontal="true"
+        app:errorEnabled="true"
+        android:text=""
+        android:textColor="#1A2A3C"
+        android:textSize="20sp"
+        android:textStyle="bold" />
+
+</RelativeLayout>
